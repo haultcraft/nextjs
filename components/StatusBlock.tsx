@@ -24,12 +24,10 @@ const StatusBlock = ({}) => {
 		isLoading(false);
 	};
 
-	function handleIntervalFetch() {
-		setInterval(handleIntervalFetch, 30000);
-	}
-
 	useEffect(() => {
 		handleServerStatus();
+		const ms = 1000;
+		setInterval(() => handleServerStatus(), 60 * ms);
 	}, []);
 
 	return (
@@ -76,7 +74,7 @@ const StatusBlock = ({}) => {
 								</>)
 								: (<>
 									<div className='h-[108px] flex items-center justify-center w-full'>
-										<img src='/img/menu-realms--reversed.gif'/>
+										<img src='/img/menu-realms--reversed.gif' />
 									</div>
 								</>)
 						}
