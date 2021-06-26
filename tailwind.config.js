@@ -10,11 +10,6 @@ module.exports = {
 			padding: '4rem',
 		},
 		extend: {
-			fontFamily: {
-				russo: ['Russo One', 'sans-serif'],
-				lato: ['Lato', 'sans-serif'],
-				work: ['Work Sans', 'sans-serif'],
-			},
 			colors: {
 				gray: colors.trueGray,
 				amber: colors.amber,

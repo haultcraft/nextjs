@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
-
 .border-edge {
   position: relative;
 
@@ -26,19 +22,6 @@
     border-width: 2px 2px 0 0;
     transform: rotate(90deg);
   }
-
-  //& > :first-child:before {
-  //  bottom: 0;
-  //  right: 0;
-  //  border-width: 0 1px 1px 0
-  //}
-
-  //& > :first-child:after {
-  //  bottom: 0;
-  //  left: 0;
-  //  background-color: yellow;
-  //  border-width: 0 0 2px 1px
-  //}
 }
 
 .player-collapse {
@@ -50,11 +33,5 @@
 }
 
 #nav-mobile:checked + .nav-collapsable {
-  @apply top-[4rem];
+  top: 4rem;
 }
-
-//@media (min-width: 780px) {
-//  .nav-collapsable {
-//
-//  }
-//}
