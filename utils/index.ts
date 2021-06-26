@@ -1,4 +1,4 @@
-const heads_api = 'https://cravatar.eu';
+const heads_api = 'https://mc-heads.net';
 
 export function getHeadURL(username: string, size: number = 64) {
 	return `${heads_api}/head/${username}/${size}.png`;
