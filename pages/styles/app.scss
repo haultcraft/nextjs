@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
+
+.border-edge {
+  position: relative;
+
+  &:before, &:after, & > :first-child:before, & > :first-child:after {
+    position: absolute;
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border-color: #FBBF24; /* or whatever colour */
+    border-style: solid; /* or whatever style */
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+    transform: rotate(90deg);
+  }
+
+  //& > :first-child:before {
+  //  bottom: 0;
+  //  right: 0;
+  //  border-width: 0 1px 1px 0
+  //}
+
+  //& > :first-child:after {
+  //  bottom: 0;
+  //  left: 0;
+  //  background-color: yellow;
+  //  border-width: 0 0 2px 1px
+  //}
+}
+
+.player-collapse {
+  height: 108px;
+
+  &[aria-expanded='true'] {
+    height: 100%;
+  }
+}
+
+#nav-mobile:checked + .nav-collapsable {
+  @apply top-[4rem];
+}
+
+//@media (min-width: 780px) {
+//  .nav-collapsable {
+//
+//  }
+//}
