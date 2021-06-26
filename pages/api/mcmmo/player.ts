@@ -12,7 +12,7 @@ const handler: NextApiHandler = async (req, res) => {
 			join mcmmo_skills
 			on mcmmo_skills.user_id = mcmmo_users.id
 			where mcmmo_users.user = (?) or mcmmo_users.uuid = (?);
-  `, [playerUsername, playerUUID]);
+  `, [playerUsername, playerUUID]) as [];
 
 		if (results.length < 1) {
 			return res.status(404).json({ message: 'No players found' });
