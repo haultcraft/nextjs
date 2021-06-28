@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
-import { getAvatarURL, getHeadURL } from '@/utils';
-
+import { getAvatarURL } from '@/utils';
 
 const StatusBlock = ({}) => {
 	const [currentPlayers, setCurrentPlayers] = useState<string[]>([]);
@@ -41,7 +40,7 @@ const StatusBlock = ({}) => {
 						{
 							!loading
 								? (<>
-									<div className='min-w-[140px] md:mt-8 top-0 mx-auto'>
+									<div className='min-w-[140px] m:h-[108px] flex items-start justify-center flex-col top-0 mx-auto'>
 
 										<p><span className='text-gray-400'>Status: </span> <FontAwesomeIcon
 											className={(serverOnline ? 'text-mine-green' : 'text-mine-red') + ' text-sm text-opacity-90'}

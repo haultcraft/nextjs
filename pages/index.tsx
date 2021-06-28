@@ -11,10 +11,10 @@ export default function Home() {
 		<>
 			<StatusBlock />
 			<HeroBlock />
-			<LogoBlock />
-			<PricingBlock />
-			<RatingBlock />
-			<FAQBlock />
+			{/*<LogoBlock />*/}
+			{/*<PricingBlock />*/}
+			{/*<RatingBlock />*/}
+			{/*<FAQBlock />*/}
 		</>
 	);
 }
