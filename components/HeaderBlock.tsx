@@ -20,8 +20,8 @@ const HeaderBlock = () => {
 			<header className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 py-4 lg:py-6 flex justify-between'>
 				<div className='w-full'>
 					<Link href='/'>
-						<a className='text-2xl font-bold'>
-							Comp Craft
+						<a className='text-2xl font-bold font-minecrafter-alt tracking-wider'>
+							Comp <span className='text-amber-400'>Craft</span>
 						</a>
 					</Link>
 

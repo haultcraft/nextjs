@@ -10,6 +10,10 @@ module.exports = {
 			padding: '4rem',
 		},
 		extend: {
+			fontFamily: {
+				minecrafter: ['Minecrafter', 'sans-serif'],
+				'minecrafter-alt': ['Minecrafter Alternative', 'sans-serif'],
+			},
 			colors: {
 				gray: colors.trueGray,
 				amber: colors.amber,
