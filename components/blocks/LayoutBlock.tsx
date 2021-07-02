@@ -1,5 +1,5 @@
-import HeaderBlock from '@/components/HeaderBlock';
-import FooterBlock from '@/components/FooterBlock';
+import HeaderBlock from '@/components/blocks/HeaderBlock';
+import FooterBlock from '@/components/blocks/FooterBlock';
 
 const LayoutBlock = ({ children }) => {
 	return (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
 import { getAvatarURL } from '@/utils';
+import { getServerStatus } from '@/lib/services/server';
 
 const StatusBlock = ({}) => {
 	const [currentPlayers, setCurrentPlayers] = useState<string[]>([]);
@@ -12,14 +12,14 @@ const StatusBlock = ({}) => {
 	const [playersExpanded, isPlayersExpanded] = useState<boolean>(false);
 
 	async function handleServerStatus() {
-		const { data } = await axios.get('/api/server/query');
+		const data = await getServerStatus();
 		if (data.status == 'offline') {
 			isServerOnline(false);
 		}
 		isServerOnline(true);
-		setCurrentPlayers(data.players);
-		setPlayersCapacity(data.maxPlayers);
-		setPlayersOnline(data.onlinePlayers);
+		setCurrentPlayers(data.players.sample ? data.players.sample.map(item => item.name) : []);
+		setPlayersCapacity(data.players.max);
+		setPlayersOnline(data.players.online);
 		isLoading(false);
 	};
 

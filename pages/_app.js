@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import '@/pages/styles/app.scss';
-import LayoutBlock from '@/components/LayoutBlock';
+import LayoutBlock from '~/components/blocks/LayoutBlock';
 import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
