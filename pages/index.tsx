@@ -14,8 +14,8 @@ export default function Home() {
 		<React.Fragment>
 			<StatusBlock />
 			<HeroBlock />
-			<LeaderBoardSkills/>
 			<LeaderBoardJobs/>
+			<LeaderBoardSkills/>
 			{/*<LogoBlock />*/}
 			{/*<PricingBlock />*/}
 			{/*<RatingBlock />*/}
