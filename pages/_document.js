@@ -10,18 +10,18 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<link
-						rel="preload"
-						href="/fonts/Minecraft.Reg.ttf"
-						as="font"
-						crossOrigin=""
-					/>
-					<link
-						rel="preload"
-						href="/fonts/Minecraft.Alt.ttf"
-						as="font"
-						crossOrigin=""
-					/>
+					{/*<link*/}
+					{/*	rel="preload"*/}
+					{/*	href="/fonts/Minecraft.Reg.ttf"*/}
+					{/*	as="font"*/}
+					{/*	crossOrigin=""*/}
+					{/*/>*/}
+					{/*<link*/}
+					{/*	rel="preload"*/}
+					{/*	href="/fonts/Minecraft.Alt.ttf"*/}
+					{/*	as="font"*/}
+					{/*	crossOrigin=""*/}
+					{/*/>*/}
 				</Head>
 				<body className='font-sans'>
 				<Main />
