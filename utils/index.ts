@@ -8,7 +8,7 @@ export function getAvatarURL(username: string, size: number = 64) {
 	return `${heads_api}/avatar/${username}/${size}.png`;
 }
 
-import { addHours, getMinutes, getHours, getSeconds } from 'date-fns';
+import { addHours, getMinutes, getHours, getSeconds, getDay } from 'date-fns';
 
 export const convertToDuration = (secondsAmount: number) => {
 	const normalizeTime = (time: string): string =>
@@ -22,10 +22,12 @@ export const convertToDuration = (secondsAmount: number) => {
 	const date = new Date(milliseconds);
 	const timezoneDiff = date.getTimezoneOffset() / MINUTES_IN_HOUR;
 	const dateWithoutTimezoneDiff = addHours(date, timezoneDiff);
-
-	const hours = normalizeTime(String(getHours(dateWithoutTimezoneDiff)));
+	const day = (getDay(dateWithoutTimezoneDiff) - 4) * 24;
+	const hours = normalizeTime(String(getHours(dateWithoutTimezoneDiff) + day));
 	const minutes = normalizeTime(String(getMinutes(dateWithoutTimezoneDiff)));
 	const seconds = normalizeTime(String(getSeconds(dateWithoutTimezoneDiff)));
+
+	console.log(day, getHours(dateWithoutTimezoneDiff), getMinutes(dateWithoutTimezoneDiff), getSeconds(dateWithoutTimezoneDiff), timezoneDiff, date);
 
 	const hoursOutput = hours !== '00' ? `${hours}:` : '';
 

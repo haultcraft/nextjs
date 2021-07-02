@@ -41,7 +41,7 @@ const LeaderBoardGeneral = ({}) => {
 					className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4'>
 					<h1 className='text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8'>General
 						Leaderboards</h1>
-					<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
 						<LeaderBoard skill='Played Time' list={playedTime || []} field='played_time'
 												 color={{ topColor: 'bg-indigo-200', textColor: 'text-indigo-600' }} />
 						<LeaderBoard skill='Money' list={balanceTop || []} field='balance'
