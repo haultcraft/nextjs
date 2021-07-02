@@ -8,12 +8,14 @@ import FAQBlock from '@/components/blocks/FAQBlock';
 import StatusBlock from '@/components/blocks/StatusBlock';
 import LeaderBoardSkills from '@/components/blocks/LeaderBoardSkills';
 import LeaderBoardJobs from '@/components/blocks/LeaderBoardJobs';
+import LeaderBoardGeneral from '@/components/blocks/LeaderBoardGeneral';
 
 export default function Home() {
 	return (
 		<React.Fragment>
 			<StatusBlock />
 			<HeroBlock />
+			<LeaderBoardGeneral/>
 			<LeaderBoardJobs/>
 			<LeaderBoardSkills/>
 			{/*<LogoBlock />*/}

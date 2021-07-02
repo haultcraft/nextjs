@@ -29,12 +29,13 @@ const LeaderBoardJobs = ({}) => {
 						Leaderboards</h1>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
 						<LeaderBoard skill='Miner' list={minerJob || []}
+												 field='level'
 												 color={{ topColor: 'bg-gray-200', textColor: 'text-gray-600' }} />
-						<LeaderBoard skill='Woodcutter' list={woodcutterJob || []}
+						<LeaderBoard skill='Woodcutter' list={woodcutterJob || []} field='level'
 												 color={{ topColor: 'bg-green-200', textColor: 'text-green-600' }} />
-						<LeaderBoard skill='Hunter' list={hunterJob || []}
+						<LeaderBoard skill='Hunter' list={hunterJob || []} field='level'
 												 color={{ topColor: 'bg-red-200', textColor: 'text-red-600' }} />
-						<LeaderBoard skill='Explorer' list={explorerJob || []}
+						<LeaderBoard skill='Explorer' list={explorerJob || []} field='level'
 												 color={{ topColor: 'bg-blue-200', textColor: 'text-blue-600' }} />
 					</div>
 				</div>

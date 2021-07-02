@@ -1,8 +1,9 @@
 import { getHeadURL } from '@/utils';
 
-type TableColors = {
+type TableProps = {
 	textColor: string;
 	topColor: string;
+	textPrefix?: string
 }
 
 type ListPlayer = {
@@ -13,7 +14,8 @@ type ListPlayer = {
 type LeaderboardProps = {
 	skill: string;
 	list: ListPlayer[];
-	color: TableColors
+	color: TableProps;
+	field: string
 }
 
 
@@ -21,6 +23,7 @@ const LeaderBoard = ({
 											 skill,
 											 list,
 											 color,
+											 field,
 										 }: LeaderboardProps) => {
 	return (
 		<>
@@ -37,7 +40,7 @@ const LeaderBoard = ({
 							<td className='text-center text-gray-300 px-2'>{index + 1}</td>
 							<td className='w-48 px-2 flex py-2'><img src={getHeadURL(item.username)} alt=''
 																											 className='w-8 h-8 mr-2' />{item.username}</td>
-							<td className={color.textColor + ' text-center px-2'}>{item.level}</td>
+							<td className={color.textColor + ' text-right px-2'}>{color.textPrefix}{item[field]}</td>
 						</tr>
 					))
 				}
