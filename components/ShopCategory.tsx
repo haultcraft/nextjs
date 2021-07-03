@@ -1,4 +1,4 @@
-import { ShopCategoryProps } from '@/lib/services/shop';
+import { ShopCategoryProps } from '@/lib/services/shops';
 
 const ShopCategory = ({ title, list }: ShopCategoryProps) => {
 	return (

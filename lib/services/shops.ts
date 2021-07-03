@@ -15,6 +15,6 @@ export type ShopCategoryProps = {
 }
 
 export async function getListItems() {
-	const { data } = await axios.get(`${API_HOST}/shop`);
+	const { data } = await axios.get(`${API_HOST}/shops`);
 	return data;
 }

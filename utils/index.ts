@@ -27,8 +27,6 @@ export const convertToDuration = (secondsAmount: number) => {
 	const minutes = normalizeTime(String(getMinutes(dateWithoutTimezoneDiff)));
 	const seconds = normalizeTime(String(getSeconds(dateWithoutTimezoneDiff)));
 
-	console.log(day, getHours(dateWithoutTimezoneDiff), getMinutes(dateWithoutTimezoneDiff), getSeconds(dateWithoutTimezoneDiff), timezoneDiff, date);
-
 	const hoursOutput = hours !== '00' ? `${hours}:` : '';
 
 	return `${hoursOutput}${minutes}:${seconds}`;

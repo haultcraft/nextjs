@@ -1,6 +1,6 @@
 import LeaderBoard from '@/components/LeaderBoard';
 import { useEffect, useState } from 'react';
-import { getListItems, ItemShop } from '@/lib/services/shop';
+import { getListItems, ItemShop } from '@/lib/services/shops';
 import ShopCategory from '@/components/ShopCategory';
 
 const ShopBlock = ({}) => {
@@ -29,7 +29,6 @@ const ShopBlock = ({}) => {
 		}
 
 		const data = await getListItems();
-		console.log(data);
 		setBlocksShop(clearShop(data['Blocks']));
 		setDecorationShop(clearShop(data['Decoration']));
 		setDyesShop(clearShop(data['Dyes']));

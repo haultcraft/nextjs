@@ -82,6 +82,7 @@ const FooterBlock = ({}) => {
 					className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 flex flex-col md:flex-row justify-center items-center space-y-4 mt-16 lg:mt-20'>
 					<div className='text-sm space-y-4 md:space-y-1 text-center md:text-center'>
 						<p>&copy;2020 CompCraft. All rights reserved. | All rights reserved</p>
+						<img src='https://api.netlify.com/api/v1/badges/61e4171a-5d8a-4c2b-a6ae-9df2e3851793/deploy-status' alt='Netlify Status' className='mx-auto' />
 						{/*<p>Wisdom is easily acquired when hiding under the bed with a saucepan on your head.</p>*/}
 					</div>
 					{/*<a href='#'*/}
