@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const HeaderBlock = () => {
 	const links = [
 		{ label: 'Home', url: '/' },
-		{ label: 'Server', url: '/server' },
+		{ label: 'Shop', url: '/shop' },
 		{ label: 'Gallery', url: '/gallery' },
 		{ label: 'Stats', url: '/stats' },
-		{ label: 'Shop', url: '/shop' },
+		// { label: 'Shop', url: '/shop' },
 		{ label: 'Download', url: '/download' },
 		{ label: 'Discord', url: '/discord' },
 	];
