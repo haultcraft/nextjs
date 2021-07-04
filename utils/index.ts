@@ -31,3 +31,13 @@ export const convertToDuration = (secondsAmount: number) => {
 
 	return `${hoursOutput}${minutes}:${seconds}`;
 };
+
+export const moneyFormatter = (moneyAmount: number) => {
+	if (moneyAmount > 999_999) {
+		return parseFloat(String(moneyAmount / 1_000_000)).toFixed(2) + 'M';
+	} else if (moneyAmount > 999) {
+		return parseFloat(String(moneyAmount / 1_000)).toFixed(2) + 'K';
+	}
+	return String(moneyAmount);
+
+};

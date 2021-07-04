@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import LeaderBoard from '@/components/LeaderBoard';
 import { getToplistBalance, getToplistPlayedtime } from '@/lib/services/player';
-import { convertToDuration } from '@/utils';
+import { convertToDuration, moneyFormatter } from '@/utils';
 import { getTopListSkill } from '@/lib/services/mcmmo';
 
 const LeaderBoardGeneral = ({}) => {
@@ -25,6 +25,10 @@ const LeaderBoardGeneral = ({}) => {
 
 	async function handleBalance() {
 		let data = await getToplistBalance();
+		data = data.map(item => ({
+			...item,
+			balance: moneyFormatter(item['balance']),
+		}));
 		setBalanceTop(data);
 	}
 

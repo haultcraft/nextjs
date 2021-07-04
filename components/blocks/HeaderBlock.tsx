@@ -6,9 +6,9 @@ const HeaderBlock = () => {
 	const links = [
 		{ label: 'Home', url: '/' },
 		{ label: 'Shop', url: '/shop' },
+		{ label: 'Jobs', url: '/jobs' },
 		{ label: 'Gallery', url: '/gallery' },
 		{ label: 'Stats', url: '/stats' },
-		// { label: 'Shop', url: '/shop' },
 		{ label: 'Download', url: '/download' },
 		{ label: 'Discord', url: '/discord' },
 	];
