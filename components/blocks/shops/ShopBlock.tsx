@@ -41,7 +41,7 @@ const ShopBlock = ({}) => {
 		setOthersShop(clearShop(data['Others']));
 		setPotionsShop(clearShop(data['Potions']));
 		setRedstoneShop(clearShop(data['Redstone']));
-		setSpawnEggsShop(clearShop(data['SpawnEggs']));
+		// setSpawnEggsShop(clearShop(data['SpawnEggs']));
 		setWorkstationsShop(clearShop(data['Workstations']));
 	}
 
@@ -63,18 +63,18 @@ const ShopBlock = ({}) => {
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
 						<ShopCategory title='Workstations' list={workstationsShop || []} />
 						<ShopCategory title='Dyes' list={dyesShop || []} />
-						{/*<ShopCategory title='Enchanting' list={enchantingShop || []} />*/}
+						<ShopCategory title='Enchanting' list={enchantingShop || []} field='enchantments' />
 						<ShopCategory title='Farming' list={farmingShop || []} />
 						<ShopCategory title='Food' list={foodShop || []} />
-						<ShopCategory title='Music' list={mobsShop || []} />
+						<ShopCategory title='Mobs' list={mobsShop || []} />
 						<ShopCategory title='Music' list={musicShop || []} />
 						<ShopCategory title='Ores' list={oresShop || []} />
 						<ShopCategory title='Redstone' list={redstoneShop || []} />
-						<ShopCategory title='SpawnEggs' list={spawnEggsShop || []} />
+						{/*<ShopCategory title='SpawnEggs' list={spawnEggsShop || []} />*/}
 						<ShopCategory title='Others' list={othersShop || []} />
 						<ShopCategory title='Decoration' list={decorationShop || []} />
 						<ShopCategory title='Blocks' list={blocksShop || []} />
-						<ShopCategory title='Potions' list={potionsShop || []} />
+						<ShopCategory title='Potions' list={potionsShop || []} field='potiontypes'/>
 					</div>
 				</div>
 			</div>

@@ -4,6 +4,7 @@ const API_HOST = process.env['NEXT_PUBLIC_API_HOST'];
 
 export type ItemShop = {
 	material: string;
+	enchantments: string[];
 	material_img: string;
 	buy: number;
 	sell: number;
@@ -11,7 +12,8 @@ export type ItemShop = {
 
 export type ShopCategoryProps = {
 	title: string;
-	list: ItemShop[]
+	list: ItemShop[];
+	field?: string;
 }
 
 export async function getListItems() {
