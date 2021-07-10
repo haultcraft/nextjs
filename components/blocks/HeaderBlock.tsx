@@ -8,7 +8,7 @@ const HeaderBlock = () => {
 		{ label: 'Shop', url: '/shop' },
 		{ label: 'Jobs', url: '/jobs' },
 		{ label: 'Enchantments', url: '/enchantments' },
-		{ label: 'Map', url: '/map' },
+		// { label: 'Map', url: '/map' },
 		{ label: 'Download', url: '/download' },
 		{ label: 'Discord', url: '/discord' },
 	];
