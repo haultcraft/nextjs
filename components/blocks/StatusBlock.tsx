@@ -8,6 +8,7 @@ const StatusBlock = ({}) => {
 	const [playersOnline, setPlayersOnline] = useState<number>();
 	const [playersCapacity, setPlayersCapacity] = useState<number>();
 	const [serverOnline, isServerOnline] = useState<boolean>();
+	const [serverVersion, setServerVersion] = useState<boolean>();
 	const [loading, isLoading] = useState<boolean>(true);
 	const [playersExpanded, isPlayersExpanded] = useState<boolean>(false);
 
@@ -18,6 +19,7 @@ const StatusBlock = ({}) => {
 		}
 		isServerOnline(true);
 		setCurrentPlayers(data.players.sample ? data.players.sample.map(item => item.name) : []);
+		setServerVersion(data.version.name.replace( /^\D+/g, ''));
 		setPlayersCapacity(data.players.max);
 		setPlayersOnline(data.players.online);
 		isLoading(false);
@@ -47,6 +49,7 @@ const StatusBlock = ({}) => {
 											icon={['fas', (serverOnline ? 'check' : 'times')]} /> {serverOnline ? 'Online' : 'Offline'}
 										</p>
 										<p><span className='text-gray-400'>Jogadores: </span>{playersOnline || 0} / {playersCapacity || 0}</p>
+										<p><span className='text-gray-400'>Versão: </span>{serverVersion || ''}</p>
 									</div>
 
 									<div
