@@ -30,35 +30,37 @@ const EnchantmentsList = ({ list, field, loading, rarity }: EnchantmentListProps
 					</thead>
 					{
 						loading ?
-							(<tbody>
-							{
-								Array.from({ length: 20 }, (x, i) => i).map((item, index) => (
-									<tr key={item} className='border-b'>
-										<td className='text-center text-gray-300 px-2'>{index + 1}</td>
-										<td className='py-2 capitalize px-2'>
-											<Skeleton count={1} />
-										</td>
-										<td className='px-2'>
-											<Skeleton count={1} />
-										</td>
-										{
-											!!rarity
-											&& (
-												<td className='capitalize px-2'>
-													<Skeleton count={1} />
-												</td>
-											)
-										}
-										<td className='text-left px-2'>
-											<Skeleton count={1} />
-										</td>
-										<td className='text-center  px-2'>
-											<Skeleton count={1} />
-										</td>
-									</tr>
-								))
-							}
-							</tbody>)
+							(
+								<tbody>
+								{
+									Array.from({ length: 20 }, (x, i) => i).map((item, index) => (
+										<tr key={item} className='border-b'>
+											<td className='text-center text-gray-300 px-2'>{index + 1}</td>
+											<td className='py-2 capitalize px-2'>
+												<Skeleton count={1} />
+											</td>
+											<td className='px-2'>
+												<Skeleton count={1} />
+											</td>
+											{
+												!!rarity
+												&& (
+													<td className='capitalize px-2'>
+														<Skeleton count={1} />
+													</td>
+												)
+											}
+											<td className='text-left px-2'>
+												<Skeleton count={1} />
+											</td>
+											<td className='text-center  px-2'>
+												<Skeleton count={1} />
+											</td>
+										</tr>
+									))
+								}
+								</tbody>
+							)
 							:
 							(
 								<tbody>
