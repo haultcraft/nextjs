@@ -1,7 +1,6 @@
 import { ItemJob } from '@/lib/services/jobs';
 import { Disclosure } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import LeaderBoardJobs from '@/components/blocks/leaderboards/LeaderBoardJobs';
 import LeaderBoard from '@/components/LeaderBoard';
 import { moneyFormatter } from '@/utils';
 

@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import ImageSkeleton from '@/public/img/skeleton.png';
-
 const HeroBlock = ({}) => {
 	return (
 		<>

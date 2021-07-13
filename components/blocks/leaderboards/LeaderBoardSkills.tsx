@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import ImageSkeleton from '@/public/img/skeleton.png';
 import { useEffect, useState } from 'react';
 import { getTopListSkill } from '@/lib/services/mcmmo';
 import LeaderBoard from '@/components/LeaderBoard';

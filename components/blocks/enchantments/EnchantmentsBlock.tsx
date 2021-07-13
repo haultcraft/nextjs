@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Enchantment, getCustomEnchantments, getDefaultEnchantments } from '@/lib/services/enchantments';
 import EnchantmentsList from '@/components/blocks/enchantments/EnchantmentsList';
-import Skeleton from 'react-loading-skeleton';
 
 
 const EnchatmentsBlock = ({}) => {
