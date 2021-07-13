@@ -1,6 +1,5 @@
-import LeaderBoard from '@/components/LeaderBoard';
 import { useEffect, useState } from 'react';
-import { getListItems, ItemShop } from '@/lib/services/shops';
+import { getListItems, getSectionItems, ItemShop } from '@/lib/services/shops';
 import ShopCategory from '@/components/ShopCategory';
 
 const ShopBlock = ({}) => {
@@ -20,29 +19,20 @@ const ShopBlock = ({}) => {
 	const [workstationsShop, setWorkstationsShop] = useState<ItemShop[]>();
 
 	async function handleGetShop() {
-		function clearShop(arr: {}) {
-			return Object.values(arr).map((item: ItemShop) => ({
-				...item,
-				material: item['material'].replace(new RegExp('\_', 'g'), ' ').toLowerCase(),
-				material_img: item['material'].toLowerCase(),
-			}));
-		}
-
 		const data = await getListItems();
-		setBlocksShop(clearShop(data['Blocks']));
-		setDecorationShop(clearShop(data['Decoration']));
-		setDyesShop(clearShop(data['Dyes']));
-		setEnchantingShop(clearShop(data['Enchanting']));
-		setFarmingShop(clearShop(data['Farming']));
-		setFoodShop(clearShop(data['Food']));
-		setMobsShop(clearShop(data['Mobs']));
-		setMusicShop(clearShop(data['Music']));
-		setOresShop(clearShop(data['Ores']));
-		setOthersShop(clearShop(data['Others']));
-		setPotionsShop(clearShop(data['Potions']));
-		setRedstoneShop(clearShop(data['Redstone']));
-		// setSpawnEggsShop(clearShop(data['SpawnEggs']));
-		setWorkstationsShop(clearShop(data['Workstations']));
+		setBlocksShop(await getSectionItems('Blocks'));
+		setDecorationShop(await getSectionItems('Decoration'));
+		setDyesShop(await getSectionItems('Dyes'));
+		setEnchantingShop(await getSectionItems('Enchanting'));
+		setFarmingShop(await getSectionItems('Farming'));
+		setFoodShop(await getSectionItems('Food'));
+		setMobsShop(await getSectionItems('Mobs'));
+		setMusicShop(await getSectionItems('Music'));
+		setOresShop(await getSectionItems('Ores'));
+		setOthersShop(await getSectionItems('Others'));
+		setPotionsShop(await getSectionItems('Potions'));
+		setRedstoneShop(await getSectionItems('Redstone'));
+		setWorkstationsShop(await getSectionItems('Workstations'));
 	}
 
 	useEffect(() => {
@@ -74,7 +64,7 @@ const ShopBlock = ({}) => {
 						<ShopCategory title='Others' list={othersShop || []} />
 						<ShopCategory title='Decoration' list={decorationShop || []} />
 						<ShopCategory title='Blocks' list={blocksShop || []} />
-						<ShopCategory title='Potions' list={potionsShop || []} field='potiontypes'/>
+						<ShopCategory title='Potions' list={potionsShop || []} field='potiontypes' />
 					</div>
 				</div>
 			</div>

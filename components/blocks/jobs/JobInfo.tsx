@@ -14,7 +14,7 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 						<Disclosure.Button
 							className={`flex items-center justify-between w-full py-2 text-sm font-medium text-left border-b-2 border-${color}-200 outline-none focus:outline-none`}>
 							<div>
-								<h3 className='text-lg leading-6 font-medium'>
+								<h3 className='text-lg leading-6 font-medium capitalize'>
 									{name}
 								</h3>
 								<p className='mt-1 max-w-2xl text-sm text-gray-500'>
