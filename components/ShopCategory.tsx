@@ -16,7 +16,7 @@ const ShopCategory = ({ title, list, field = 'material' }: ShopCategoryProps) =>
 						? (
 							Array.from({ length: 20 }, (x, i) => i).map((item, index) => (
 									<tr key={index} className='border-b'>
-										<td className='text-center text-gray-300 px-2 md:w-[4rem]'>{index + 1}</td>
+										<td className='text-center text-gray-300 px-2 w-[4rem]'>{index + 1}</td>
 										<td className='px-2 flex py-2 capitalize flex flex-col'>
 											<p className='capitalize'><Skeleton count={1} /></p>
 											<div className='text-xs flex justify-between'>
@@ -30,7 +30,7 @@ const ShopCategory = ({ title, list, field = 'material' }: ShopCategoryProps) =>
 						: (
 							list.map((item, index) => (
 								<tr key={item[field]} className='border-b'>
-									<td className='text-center text-gray-300 px-2'>{index + 1}</td>
+									<td className='text-center text-gray-300 px-2 w-[4rem]'>{index + 1}</td>
 									<td className='px-2 flex py-2 capitalize flex flex-col'>
 										<p className='capitalize'>{
 											typeof item[field] == 'object'
