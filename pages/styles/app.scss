@@ -47,5 +47,5 @@
 }
 
 #global-nav[aria-expanded="true"] {
-  top: 4rem;
+  @apply top-20
 }

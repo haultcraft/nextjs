@@ -21,8 +21,8 @@ const HeaderBlock = () => {
 
 	return (
 		<>
-			<header className='max-w-screen-xl h-20 mx-auto px-6 lg:px-8 xl:px-4 items-center flex justify-between'>
-				<div className='flex w-full lg:w-[180px] justify-between items-center'>
+			<header className='max-w-screen-xl h-20 mx-auto px-6 lg:px-8 xl:px-4 items-center flex justify-between z-0'>
+				<div className='flex w-full lg:w-[180px] justify-between items-center bg-white lg:bg-transparent z-20 h-20'>
 					<Link href='/'>
 						<a className='text-2xl font-bold font-minecrafter-alt tracking-wider min-w-[180px]'>
 							Comp <span className='text-amber-400'>Craft</span>
@@ -36,7 +36,7 @@ const HeaderBlock = () => {
 
 				<nav
 					id='global-nav'
-					className='flex absolute top-[-200%] text-base flex-col left-0 px-6 bg-white z-10 w-screen transition-all ease-in duration-200 lg:static  lg:flex-row lg:gap-4 lg:justify-end lg:p-0 lg:m-0 lg:w-full lg:items-center'
+					className='flex z-10 absolute top-[-200%] text-base flex-col left-0 px-6 pb-8 lg:pb-0 bg-white z-10 w-screen transition-all ease-in duration-200 lg:static  lg:flex-row lg:gap-4 lg:justify-end lg:p-0 lg:m-0 lg:w-full lg:items-center'
 					aria-expanded={navOpen ? 'true' : 'false'}
 				>
 					{

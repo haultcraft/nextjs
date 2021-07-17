@@ -1,35 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getAvatarURL } from '@/utils';
-import { getServerStatus } from '@/lib/services/server';
+import ServerContext from '@/components/context/ServerContext';
 
 const StatusBlock = ({}) => {
-	const [currentPlayers, setCurrentPlayers] = useState<string[]>([]);
-	const [playersOnline, setPlayersOnline] = useState<number>();
-	const [playersCapacity, setPlayersCapacity] = useState<number>();
-	const [serverOnline, isServerOnline] = useState<boolean>();
-	const [serverVersion, setServerVersion] = useState<boolean>();
-	const [loading, isLoading] = useState<boolean>(true);
 	const [playersExpanded, isPlayersExpanded] = useState<boolean>(false);
+	const serverContext = useContext(ServerContext);
 
-	async function handleServerStatus() {
-		const data = await getServerStatus();
-		if (data.status == 'offline') {
-			isServerOnline(false);
-		}
-		isServerOnline(true);
-		setCurrentPlayers(data.players.sample ? data.players.sample.map(item => item.name) : []);
-		setServerVersion(data.version.name.replace( /^\D+/g, ''));
-		setPlayersCapacity(data.players.max);
-		setPlayersOnline(data.players.online);
-		isLoading(false);
-	};
-
-	useEffect(() => {
-		handleServerStatus();
-		const ms = 1000;
-		setInterval(() => handleServerStatus(), 60 * ms);
-	}, []);
 
 	return (
 		<div style={{ backgroundImage: 'url(/img/stone_texture.png)', backgroundSize: '64px' }}
@@ -40,24 +17,24 @@ const StatusBlock = ({}) => {
 					<div
 						className='max-w-screen-xl mx-auto flex flex-col md:flex-row gap-4 flex-row py-4 px-4 md:px-8 md:py-4 bg-gray-900/90'>
 						{
-							!loading
+							!serverContext.loading
 								? (<>
 									<div className='min-w-[140px] m:h-[108px] flex items-start justify-center flex-col top-0 mx-auto'>
 
 										<p><span className='text-gray-400'>Status: </span> <FontAwesomeIcon
-											className={(serverOnline ? 'text-mine-green' : 'text-mine-red') + ' text-sm text-opacity-90'}
-											icon={['fas', (serverOnline ? 'check' : 'times')]} /> {serverOnline ? 'Online' : 'Offline'}
+											className={(serverContext.online ? 'text-mine-green' : 'text-mine-red') + ' text-sm text-opacity-90'}
+											icon={['fas', (serverContext.online ? 'check' : 'times')]} /> {serverContext.online ? 'Online' : 'Offline'}
 										</p>
-										<p><span className='text-gray-400'>Jogadores: </span>{playersOnline || 0} / {playersCapacity || 0}</p>
-										<p><span className='text-gray-400'>Versão: </span>{serverVersion || ''}</p>
+										<p><span className='text-gray-400'>Jogadores: </span>{serverContext.onlinePlayers || 0} / {serverContext.maxPlayers || 0}</p>
+										<p><span className='text-gray-400'>Versão: </span>{serverContext.version || ''}</p>
 									</div>
 
 									<div
 										className='flex items-center justify-center flex-wrap gap-8 min-h-[112px] player-collapse overflow-hidden w-full'
 										aria-expanded={playersExpanded}>
 										{
-											currentPlayers.length > 0
-												? currentPlayers.map(player => (
+											serverContext.currentPlayers.length > 0
+												? serverContext.currentPlayers.map(player => (
 													<div key={player}
 															 className='flex flex-col items-center border-edge bg-gray-400/10 shadow w-24 p-4 cursor-pointer hover:bg-gray-100/20 transition-color ease-in duration-200'
 													>
