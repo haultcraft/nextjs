@@ -8,6 +8,7 @@ type ServerCTX = {
 	version: string
 	loading: boolean
 	plugins: string[]
+	ip: string
 }
 
 const ServerContext = createContext({} as ServerCTX);

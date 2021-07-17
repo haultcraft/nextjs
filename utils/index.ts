@@ -8,7 +8,7 @@ export function getAvatarURL(username: string, size: number = 64) {
 	return `${heads_api}/avatar/${username}/${size}.png`;
 }
 
-import { addHours, getMinutes, getHours, getSeconds, getDay } from 'date-fns';
+import { addHours, getDay, getHours, getMinutes, getSeconds } from 'date-fns';
 
 export const convertToDuration = (secondsAmount: number) => {
 	const normalizeTime = (time: string): string =>
@@ -40,4 +40,9 @@ export const moneyFormatter = (moneyAmount: number) => {
 	}
 	return String(moneyAmount);
 
+};
+
+export const copyToClipBoard = (text: string) => {
+	navigator.clipboard.writeText(text);
+	alert('IP copiado!')
 };

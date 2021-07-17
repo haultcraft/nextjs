@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import ServerContext from '@/components/context/ServerContext';
+import { copyToClipBoard } from '@/utils';
 
 const HeroBlock = ({}) => {
-	const { version } = useContext(ServerContext);
+	const { version, plugins, ip } = useContext(ServerContext);
 
 	return (
 		<>
@@ -12,8 +13,15 @@ const HeroBlock = ({}) => {
 					<div className='order-2 md:order-1 col-span-3 self-center'>
 						<h1 className='text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8'>Comp Craft
 							Club</h1>
-						<p className='text-lg xl:text-xl text-gray-600 mb-6 lg:mb-8 xl:mb-10'>Servidor de minecraft SMP com
-							plugins.</p>
+						<p className='text-lg xl:text-xl text-gray-600 mb-4'>Servidor de minecraft SMP com plugins:</p>
+						<div className='flex flex-wrap mb-4'>
+							{
+								!!plugins && plugins.map(item => (
+									<span className='mr-2 text-base'>{item}</span>
+								))
+							}
+						</div>
+
 						{/*<div className='flex space-x-4 mb-6'>*/}
 						{/*	<input type='text' placeholder='enter your email...'*/}
 						{/*				 className='flex-1 py-4 px-4 border border-gray-200 rounded-lg leading-none focus:outline-none' />*/}
@@ -22,10 +30,14 @@ const HeroBlock = ({}) => {
 						{/*		started*/}
 						{/*	</button>*/}
 						{/*</div>*/}
+						<p className='text-sm xl:text-xl text-gray-600 mb-4'>IP: <span className='text-amber-400 text-base cursor-pointer hover:text-amber-600 transition duration-200 ease-in'
+																																						 onClick={() => copyToClipBoard(ip)}>{ip}</span>
+						</p>
+
 						<p className='text-gray-500 text-sm'>Versão {version} do Minecraft.</p>
 					</div>
-					<div className='md:order-2 col-span-1 xl:col-span-1'>
-						<img src='/img/skeleton.png' className='h-80' alt='esquelo minecraft' />
+					<div className='hidden md:block md:order-2 col-span-1 xl:col-span-1'>
+						<img src='/img/skeleton.png' className='h-80 min-w-[180px]' alt='esquelo minecraft' />
 					</div>
 				</div>
 			</div>

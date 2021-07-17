@@ -21,24 +21,27 @@ function App({ Component, pageProps }) {
 	const [loading, isLoading] = useState<boolean>(true);
 
 
-	async function handleServerQuery() {
+	async function handleServerQuery(minimal: boolean = false) {
+		const ignoredPlugins = ['LuckPerms', 'PlaceholderAPI', 'eco', 'SirBlobmanCore', 'ProtocolLib', 'Vault', 'WorldEdit', 'AnimatedScoreboard', 'Essentials', 'Multiverse-Core', 'Multiverse-Inventories', 'EssentialsChat', 'Multiverse-Portals', 'ChatManager', 'WorldGuard', 'QuestClan-Addon', 'CMILib', ''];
 		const data = await getServerQuery();
 		if (data.status == 'offline') {
 			isServerOnline(false);
 		}
 		isServerOnline(true);
-		setCurrentPlayers(data.players.names);
+		setCurrentPlayers(data.players.names.sort());
 		setServerVersion(data.software.version);
 		setPlayersCapacity(data.players.max);
 		setPlayersOnline(data.players.online);
-		setServerPlugins(data.software.plugins);
+		if (!minimal) {
+			setServerPlugins(data.software.plugins.map(item => item.replace(new RegExp('[0-9](.*)', 'g'), '').trim()).filter(item => !ignoredPlugins.includes(item)));
+		}
 		isLoading(false);
-	};
+	}
 
 	useEffect(() => {
 		handleServerQuery();
 		const ms = 1000;
-		setInterval(() => handleServerQuery(), 60 * ms);
+		setInterval(() => handleServerQuery(true), 60 * ms);
 	}, []);
 
 	return (
@@ -50,6 +53,7 @@ function App({ Component, pageProps }) {
 			version: serverVersion,
 			plugins: serverPlugins,
 			loading: loading,
+			ip: 'compcraft.servegame.com'
 		}}>
 			<LayoutBlock>
 				<Head>

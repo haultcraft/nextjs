@@ -4,80 +4,80 @@ const FooterBlock = ({}) => {
 	return (
 		<>
 			<footer className='bg-white text-gray-600 py-12 xl:pb-24'>
-				<div className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 mb-12 lg:mb-16'>
-					<Link href='/'>
-						<a className='text-2xl font-bold font-minecrafter-alt tracking-wider'>
-							Comp <span className='text-amber-400'>Craft</span>
-						</a>
-					</Link>
-				</div>
-				<div
-					className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-8'>
-					<div>
-						<h5 className='text-xl font-bold text-gray-700'>Players</h5>
-						<nav className='mt-4'>
-							<ul className='space-y-2'>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Landingpages</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Features</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Showcase</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<div>
-						<h5 className='text-xl font-bold text-gray-700'>Plugins</h5>
-						<nav className='mt-4'>
-							<ul className='space-y-2'>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Employment</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Childcare</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Dealerships</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<div>
-						<h5 className='text-xl font-bold text-gray-700'>About us</h5>
-						<nav className='mt-4'>
-							<ul className='space-y-2'>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Company</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Download brochure</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Resources</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<div>
-						<h5 className='text-xl font-bold text-gray-700'>Legal</h5>
-						<nav className='mt-4'>
-							<ul className='space-y-2'>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Terms and conditions</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Security</a>
-								</li>
-								<li>
-									<a href='#' className='text-base hover:text-gray-500'>Privacy</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
+				{/*<div className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 mb-12 lg:mb-16'>*/}
+				{/*	<Link href='/'>*/}
+				{/*		<a className='text-2xl font-bold font-minecrafter-alt tracking-wider'>*/}
+				{/*			Comp <span className='text-amber-400'>Craft</span>*/}
+				{/*		</a>*/}
+				{/*	</Link>*/}
+				{/*</div>*/}
+				{/*<div*/}
+				{/*	className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-8'>*/}
+				{/*	<div>*/}
+				{/*		<h5 className='text-xl font-bold text-gray-700'>Players</h5>*/}
+				{/*		<nav className='mt-4'>*/}
+				{/*			<ul className='space-y-2'>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Landingpages</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Features</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Showcase</a>*/}
+				{/*				</li>*/}
+				{/*			</ul>*/}
+				{/*		</nav>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<h5 className='text-xl font-bold text-gray-700'>Plugins</h5>*/}
+				{/*		<nav className='mt-4'>*/}
+				{/*			<ul className='space-y-2'>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Employment</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Childcare</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Dealerships</a>*/}
+				{/*				</li>*/}
+				{/*			</ul>*/}
+				{/*		</nav>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<h5 className='text-xl font-bold text-gray-700'>About us</h5>*/}
+				{/*		<nav className='mt-4'>*/}
+				{/*			<ul className='space-y-2'>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Company</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Download brochure</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Resources</a>*/}
+				{/*				</li>*/}
+				{/*			</ul>*/}
+				{/*		</nav>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<h5 className='text-xl font-bold text-gray-700'>Legal</h5>*/}
+				{/*		<nav className='mt-4'>*/}
+				{/*			<ul className='space-y-2'>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Terms and conditions</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Security</a>*/}
+				{/*				</li>*/}
+				{/*				<li>*/}
+				{/*					<a href='#' className='text-base hover:text-gray-500'>Privacy</a>*/}
+				{/*				</li>*/}
+				{/*			</ul>*/}
+				{/*		</nav>*/}
+				{/*	</div>*/}
+				{/*</div>*/}
 				<div
 					className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 flex flex-col md:flex-row justify-center items-center space-y-4 mt-16 lg:mt-20'>
 					<div className='text-sm space-y-4 md:space-y-1 text-center md:text-center'>
