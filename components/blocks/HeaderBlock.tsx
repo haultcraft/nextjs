@@ -52,14 +52,7 @@ const HeaderBlock = () => {
 					<a href='https://discord.gg/ECkXBMZQ6T' target='_blank'
 						 className='text-gray-500 flex items-center hover:text-gray-700 mt-2 lg:mt-0'>Discord</a>
 					<a target='_blank'
-						 style={{
-							 background: '#434d58',
-							 textDecoration: 'none',
-							 fontFamily: 'Verdana,sans-serif',
-							 fontSize: '16px',
-							 textShadow: '0 1px rgba(0, 0, 0, 0.3)',
-						 }}
-						 className='text-white flex items-center hover:text-gray-200 items-center justify-center shadow px-3 py-1 rounded mt-2 lg:mt-0'
+						 className='text-white bg-gray-700 flex items-center hover:text-gray-200 items-center justify-center shadow px-3 py-1 rounded mt-2 lg:mt-0'
 						 href='https://donorbox.org/comp-craft-donation'>
 						<img src='https://donorbox.org/images/red_logo.png' alt='' className='object-contain mr-2' />
 						<span>Donate</span>
