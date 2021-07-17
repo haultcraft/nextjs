@@ -36,7 +36,7 @@ const HeaderBlock = () => {
 
 				<nav
 					id='global-nav'
-					className='flex z-10 absolute top-[-200%] text-base flex-col left-0 px-6 pb-8 lg:pb-0 bg-white z-10 w-screen transition-all ease-in duration-200 lg:static  lg:flex-row lg:gap-4 lg:justify-end lg:p-0 lg:m-0 lg:w-full lg:items-center'
+					className='flex z-10 absolute top-[-100%] text-base flex-col left-0 px-6 pb-8 lg:pb-0 bg-white z-10 w-screen transition-all ease-in duration-200 lg:static  lg:flex-row lg:gap-4 lg:justify-end lg:p-0 lg:m-0 lg:w-full lg:items-center'
 					aria-expanded={navOpen ? 'true' : 'false'}
 				>
 					{
