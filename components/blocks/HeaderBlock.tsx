@@ -46,8 +46,10 @@ const HeaderBlock = () => {
 							</Link>
 						))
 					}
+					<a href='https://tlauncher.org/' target='_blank'
+						 className='text-gray-500 flex items-center hover:text-gray-700 mt-2 md:mt-0'
+						 title='Download Minecraf'>TLauncher</a>
 					<a href='https://discord.gg/ECkXBMZQ6T' target='_blank'
-						 className='text-gray-500 flex items-center hover:text-gray-700 mt-2 md:mt-0' title='Download Minecraf'>TLauncher</a>					<a href='https://discord.gg/ECkXBMZQ6T' target='_blank'
 						 className='text-gray-500 flex items-center hover:text-gray-700 mt-2 md:mt-0'>Discord</a>
 					<a target='_blank'
 						 style={{
