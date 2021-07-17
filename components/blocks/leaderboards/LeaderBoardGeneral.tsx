@@ -11,10 +11,7 @@ const LeaderBoardGeneral = ({}) => {
 
 	async function handleGetPlayedtime() {
 		let data = await getToplistPlayedtime();
-		data = data.map(item => ({
-			...item,
-			played_time: convertToDuration(item.played_time),
-		}));
+
 		setPlayedTime(data);
 	}
 
