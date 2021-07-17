@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate_icons": "pwa-asset-generator public/favicon.png public/icons -m public/manifest.json --splash-only --icon-only --favicon -b #404040 --path-override /icons --index public/_offline.html"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -17,6 +18,7 @@
     "date-fns": "^2.22.1",
     "dotenv": "^10.0.0",
     "next": "latest",
+    "next-pwa": "^5.2.23",
     "prettier": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -28,6 +30,7 @@
     "@types/react": "^17.0.11",
     "autoprefixer": "^10.0.4",
     "postcss": "^8.1.10",
+    "pwa-asset-generator": "^4.3.1",
     "tailwindcss": "^2.1.1",
     "typescript": "^4.3.4"
   }

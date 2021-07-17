@@ -1,0 +1,30 @@
+{
+  "name": "Comp Craft | 1.17.1",
+  "short_name": "Comp Craft",
+  "description": "SMP Minecraft Server on version 1.17.1",
+  "site": "https://compcraft.baraus.dev",
+  "author": "Bruno de Araújo Alves",
+  "twitter": "@devbaraus",
+  "github": "@devbaraus",
+  "theme_color": "#fbbf24",
+  "background_color": "#404040",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/manifest-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/manifest-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "splash_pages": null
+}

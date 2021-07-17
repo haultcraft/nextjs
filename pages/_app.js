@@ -13,6 +13,8 @@ function App({ Component, pageProps }) {
 		<LayoutBlock>
 			<Head>
 				<title>Comp Craft | 1.17</title>
+				<meta name='viewport'
+							content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
 			</Head>
 			<Component {...pageProps} />
 		</LayoutBlock>

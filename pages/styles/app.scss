@@ -46,6 +46,6 @@
   }
 }
 
-#nav-mobile:checked + .nav-collapsable {
+#global-nav[aria-expanded="true"] {
   top: 4rem;
 }
