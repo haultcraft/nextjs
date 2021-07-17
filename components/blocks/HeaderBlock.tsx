@@ -11,6 +11,7 @@ const HeaderBlock = () => {
 		// { label: 'Map', url: '/map' },
 		{ label: 'Download', url: '/download' },
 		{ label: 'Discord', url: '/discord' },
+		// { label: 'Donate', url: '/donate' },
 	];
 
 	const router = useRouter();
@@ -45,6 +46,21 @@ const HeaderBlock = () => {
 							</Link>
 						))
 					}
+					<a
+						style={{
+							background: '#434d58 url(https://donorbox.org/images/red_logo.png) no-repeat 34px',
+							color: '#fff',
+							textDecoration: 'none',
+							fontFamily: 'Verdana,sans-serif',
+							display: 'inline-block',
+							fontSize: '16px',
+							padding: '6px 38px 6px 64px',
+							paddingLeft: '75px',
+							borderRadius: '2px',
+							boxShadow: '0 1px 0 0 #1f5a89',
+							textShadow: '0 1px rgba(0, 0, 0, 0.3)',
+						}}
+						href='https://donorbox.org/comp-craft-donation'>Donate</a>
 				</nav>
 			</header>
 
