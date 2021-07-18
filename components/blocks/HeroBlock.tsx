@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import ServerContext from '@/components/context/ServerContext';
 import { copyToClipBoard } from '@/utils';
+import Skeleton from 'react-loading-skeleton';
 
 const HeroBlock = ({}) => {
-	const { version, plugins, ip } = useContext(ServerContext);
+	const { loading, version, plugins, ip } = useContext(ServerContext);
 
 	return (
 		<>
@@ -14,13 +15,27 @@ const HeroBlock = ({}) => {
 						<h1 className='text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8'>Comp Craft
 							Club</h1>
 						<p className='text-lg xl:text-xl text-gray-600 mb-4'>Servidor de minecraft SMP com plugins:</p>
-						<div className='flex flex-wrap mb-4'>
-							{
-								!!plugins && plugins.map(item => (
-									<span className='mr-2 text-base'>{item}</span>
-								))
-							}
-						</div>
+						{
+							loading ?
+								(
+									<>
+										<Skeleton count={1} />
+										<Skeleton count={1} />
+										<Skeleton count={1} />
+										<Skeleton count={1} />
+									</>
+								) :
+								(
+									<div className='flex flex-wrap mb-4'>
+										{
+											!!plugins && plugins.map(item => (
+												<span className='mr-2 text-base'>{item}</span>
+											))
+										}
+									</div>
+								)
+						}
+
 
 						{/*<div className='flex space-x-4 mb-6'>*/}
 						{/*	<input type='text' placeholder='enter your email...'*/}
@@ -30,8 +45,9 @@ const HeroBlock = ({}) => {
 						{/*		started*/}
 						{/*	</button>*/}
 						{/*</div>*/}
-						<p className='text-sm xl:text-xl text-gray-600 mb-4'>IP: <span className='text-amber-400 text-base cursor-pointer hover:text-amber-600 transition duration-200 ease-in'
-																																						 onClick={() => copyToClipBoard(ip)}>{ip}</span>
+						<p className='text-sm xl:text-xl text-gray-600 mb-4'>IP: <span
+							className='text-amber-400 text-base cursor-pointer hover:text-amber-600 transition duration-200 ease-in'
+							onClick={() => copyToClipBoard(ip)}>{ip}</span>
 						</p>
 
 						<p className='text-gray-500 text-sm'>Versão {version} do Minecraft.</p>
