@@ -18,18 +18,21 @@ const HeroBlock = ({}) => {
 						{
 							loading ?
 								(
-									<>
+									<div className='mb-4'>
 										<Skeleton count={1} />
 										<Skeleton count={1} />
 										<Skeleton count={1} />
 										<Skeleton count={1} />
-									</>
+										<Skeleton count={1} className='lg:hidden' />
+										<Skeleton count={1} className='lg:hidden' />
+										<Skeleton count={1} className='lg:hidden' />
+									</div>
 								) :
 								(
 									<div className='flex flex-wrap mb-4'>
 										{
-											!!plugins && plugins.map(item => (
-												<span className='mr-2 text-base'>{item}</span>
+											!!plugins && plugins.map((item, index) => (
+												<span key={item + index} className='mr-2 text-base'>{item}</span>
 											))
 										}
 									</div>

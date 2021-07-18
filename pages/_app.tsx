@@ -1,5 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import '@/pages/styles/app.scss';
+import 'swiper/swiper.scss';
+
 import LayoutBlock from '~/components/blocks/LayoutBlock';
 import Head from 'next/head';
 import ServerContext from '~/components/context/ServerContext';
@@ -7,6 +9,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { getServerQuery } from '~/lib/services/server';
+
 import { useEffect, useState } from 'react';
 
 library.add(fab, fas);
@@ -53,7 +56,7 @@ function App({ Component, pageProps }) {
 			version: serverVersion,
 			plugins: serverPlugins,
 			loading: loading,
-			ip: 'compcraft.servegame.com'
+			ip: 'compcraft.servegame.com',
 		}}>
 			<LayoutBlock>
 				<Head>
