@@ -89,7 +89,7 @@ const HeaderBlock = () => {
 					<a href='https://tlauncher.org/' target='_blank'
 						 className='text-gray-500 flex items-center hover:text-gray-700 mt-2 md:mt-0'
 						 title='Download Minecraf'>TLauncher</a>
-					<a href='https://discord.gg/ECkXBMZQ6T' target='_blank'
+					<a href='https://discord.gg/CQT3vhqQ9r' target='_blank'
 						 className='text-gray-500 flex items-center hover:text-gray-700 mt-2 md:mt-0'>Discord</a>
 					<a target='_blank'
 						 className='text-white bg-gray-700 flex items-center hover:text-gray-200 items-center justify-center shadow px-3 py-1 rounded mt-2 md:mt-0'
