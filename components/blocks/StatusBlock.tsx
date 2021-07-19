@@ -35,42 +35,47 @@ const StatusBlock = ({}) => {
 											</p>
 											<p><span className='text-gray-400'>Versão: </span>{serverContext.version || ''}</p>
 										</div>
-										<Swiper
-											breakpoints={{
-												0: {
-													slidesPerView: 2,
-												},
-												768: {
-													slidesPerView: 3,
-												},
-												1024: {
-													slidesPerView: 4,
-												},
-												1280: {
-													slidesPerView: 6,
-												},
-												1536: {
-													slidesPerView: 8,
+										{
+											serverContext.currentPlayers.length > 0 ?
+											<Swiper
+												breakpoints={{
+													0: {
+														slidesPerView: 2,
+													},
+													768: {
+														slidesPerView: 3,
+													},
+													1024: {
+														slidesPerView: 4,
+													},
+													1280: {
+														slidesPerView: 6,
+													},
+													1536: {
+														slidesPerView: 8,
+													}
+												}}
+												navigation
+												// pagination={{ clickable: true }}
+												spaceBetween={30}
+												autoplay={true}
+												className='h-full w-full'>
+												{
+													 ['devbaraus'].map(player => (
+														<SwiperSlide key={player}>
+															<div
+																className='flex flex-col items-center border-edge bg-gray-400/10 shadow w-full p-4 cursor-pointer hover:bg-gray-100/20 transition-color ease-in duration-200'>
+																<img src={getAvatarURL(player)} alt={player + ' head'} className='h-12 rounded mb-2' />
+																<p className='text-gray-200 font-semibold text-center text-sm break-all'>{player}</p>
+															</div>
+														</SwiperSlide>
+													))
 												}
-											}}
-											navigation
-											// pagination={{ clickable: true }}
-											spaceBetween={30}
-											autoplay={true}
-											className='h-full w-full'>
-											{
-												serverContext.currentPlayers.length > 0
-												&& serverContext.currentPlayers.map(player => (
-													<SwiperSlide key={player}>
-														<div
-															className='flex flex-col items-center border-edge bg-gray-400/10 shadow w-full p-4 cursor-pointer hover:bg-gray-100/20 transition-color ease-in duration-200'>
-															<img src={getAvatarURL(player)} alt={player + ' head'} className='h-12 rounded mb-2' />
-															<p className='text-gray-200 font-semibold text-center text-sm break-all'>{player}</p>
-														</div>
-													</SwiperSlide>
-												))
-											}
-										</Swiper>
+											</Swiper> :
+												<div className='flex w-full items-center justify-center h-[108px]'>
+													<p>Não há jogadores online no momento</p>
+												</div>
+										}
 									</>
 								) :
 								(
