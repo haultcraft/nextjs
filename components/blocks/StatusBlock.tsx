@@ -61,7 +61,7 @@ const StatusBlock = ({}) => {
 												autoplay={true}
 												className='h-full w-full'>
 												{
-													 ['devbaraus'].map(player => (
+													 serverContext.currentPlayers.map(player => (
 														<SwiperSlide key={player}>
 															<div
 																className='flex flex-col items-center border-edge bg-gray-400/10 shadow w-full p-4 cursor-pointer hover:bg-gray-100/20 transition-color ease-in duration-200'>
