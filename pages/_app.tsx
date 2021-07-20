@@ -25,7 +25,7 @@ function App({ Component, pageProps }) {
 
 
 	async function handleServerQuery(minimal: boolean = false) {
-		const ignoredPlugins = ['LuckPerms', 'PlaceholderAPI', 'eco', 'SirBlobmanCore', 'ProtocolLib', 'Vault', 'WorldEdit', 'AnimatedScoreboard', 'Essentials', 'Multiverse-Core', 'Multiverse-Inventories', 'EssentialsChat', 'Multiverse-Portals', 'ChatManager', 'WorldGuard', 'QuestClan-Addon', 'CMILib', ''];
+		const ignoredPlugins = ['NBTAPI', 'LuckPerms', 'PlaceholderAPI', 'eco', 'SirBlobmanCore', 'ProtocolLib', 'Vault', 'WorldEdit', 'AnimatedScoreboard', 'Essentials', 'Multiverse-Core', 'Multiverse-Inventories', 'EssentialsChat', 'Multiverse-Portals', 'ChatManager', 'WorldGuard', 'QuestClan-Addon', 'CMILib', ''];
 		const data = await getServerQuery();
 		if (data.status == 'offline') {
 			isServerOnline(false);

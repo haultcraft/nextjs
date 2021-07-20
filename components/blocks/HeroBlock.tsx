@@ -23,9 +23,6 @@ const HeroBlock = ({}) => {
 										<Skeleton count={1} />
 										<Skeleton count={1} />
 										<Skeleton count={1} />
-										<Skeleton count={1} className='lg:hidden' />
-										<Skeleton count={1} className='lg:hidden' />
-										<Skeleton count={1} className='lg:hidden' />
 									</div>
 								) :
 								(

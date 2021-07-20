@@ -58,20 +58,20 @@ const HeaderBlock = () => {
 							<Menu.Button
 								className={(menuLinks.map(item => item.url).includes(router.pathname) ? 'font-semibold ' : 'text-gray-500') + ' flex gap-2 items-center hover:text-gray-700 mt-2 md:mt-0 mt-2 md:mt-0 font-medium'}>Wiki</Menu.Button>
 							<Transition
-								enter="transition-opacity duration-75"
-								enterFrom="opacity-0"
-								enterTo="opacity-100"
-								leave="transition-opacity duration-150"
-								leaveFrom="opacity-100"
-								leaveTo="opacity-0"
+								enter='transition-opacity duration-75'
+								enterFrom='opacity-0'
+								enterTo='opacity-100'
+								leave='transition-opacity duration-150'
+								leaveFrom='opacity-100'
+								leaveTo='opacity-0'
 							>
 								<Menu.Items static id='menu-plugins'
-														className='bg-white flex flex-col absolute top-10 left-0 pb-4 md:px-4 md:-left-4 animation  w-full md:w-max '>
+														className='bg-white flex flex-col absolute top-10 -left-6 pb-4 px-6 md:px-4 md:-left-4 animation  w-screen md:w-max border-none'>
 									{
 										menuLinks.map((item, index) => (
-											<Menu.Item>
+											<Menu.Item key={item.label + index}>
 												{({ active }) => (
-													<Link href={item.url} >
+													<Link href={item.url}>
 														<a
 															onClick={() => isNavOpen(false)}
 															className={(index == 0 ? 'mt-0 ' : 'mt-4 ') + (router.pathname === item.url ? 'font-semibold md:after:border-b-2 md:after:border-amber-400 relative md:after:absolute md:after:bottom-[-2px] md:after:left-0 md:after:w-full' : 'text-gray-500') + ' flex gap-2 items-center hover:text-gray-700'}
