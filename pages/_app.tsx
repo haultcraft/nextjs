@@ -8,7 +8,7 @@ import ServerContext from '~/components/context/ServerContext';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { getServerQuery } from '~/lib/services/server';
+import { getServerQuery, getServerStatus } from '~/lib/services/server';
 
 import { useEffect, useState } from 'react';
 
@@ -25,19 +25,16 @@ function App({ Component, pageProps }) {
 
 
 	async function handleServerQuery(minimal: boolean = false) {
-		const ignoredPlugins = ['NBTAPI','TAB', 'ClearLag','Ecobridge','Statz','DiscordSRV','DropHeads','AuthMe', 'SuperVanish', 'EssentialsSpawn', 'LuckPerms', 'PlaceholderAPI', 'eco', 'SirBlobmanCore', 'ProtocolLib', 'Vault', 'WorldEdit', 'AnimatedScoreboard', 'Essentials', 'Multiverse-Core', 'Multiverse-Inventories', 'EssentialsChat', 'Multiverse-Portals', 'ChatManager', 'WorldGuard', 'QuestClan-Addon', 'CMILib', ''];
-		const data = await getServerQuery();
+		const data = await getServerStatus();
 		if (data.status == 'offline') {
 			isServerOnline(false);
 		}
 		isServerOnline(true);
 		setCurrentPlayers(data.players.names.sort());
-		setServerVersion(data.software.version);
+		setServerVersion(data.version);
 		setPlayersCapacity(data.players.max);
 		setPlayersOnline(data.players.online);
-		if (!minimal) {
-			setServerPlugins(data.software.plugins.map(item => item.replace(new RegExp('[0-9](.*)', 'g'), '').trim()).filter(item => !ignoredPlugins.includes(item)));
-		}
+		setServerPlugins(data.plugins);
 		isLoading(false);
 	}
 
@@ -60,7 +57,7 @@ function App({ Component, pageProps }) {
 		}}>
 			<LayoutBlock>
 				<Head>
-					<title>Comp Craft | 1.17</title>
+					<title>Comp Craft | 1.17.1</title>
 					<meta name='viewport'
 								content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
 				</Head>

@@ -14,7 +14,7 @@ const HeroBlock = ({}) => {
 					<div className='order-2 md:order-1 col-span-3 self-center'>
 						<h1 className='text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8'>Comp Craft
 							Club</h1>
-						<p className='text-lg xl:text-xl text-gray-600 mb-4'>Servidor de minecraft SMP com plugins:</p>
+						{/*<p className='text-lg xl:text-xl text-gray-600 mb-4'>Survival Hard</p>*/}
 						{
 							loading ?
 								(
@@ -29,7 +29,7 @@ const HeroBlock = ({}) => {
 									<div className='flex flex-wrap mb-4'>
 										{
 											!!plugins && plugins.map((item, index) => (
-												<span key={item + index} className='mr-2 text-base'>{item}</span>
+												<span key={item + index} className='mr-4 text-base'>{item}</span>
 											))
 										}
 									</div>
@@ -45,8 +45,8 @@ const HeroBlock = ({}) => {
 						{/*		started*/}
 						{/*	</button>*/}
 						{/*</div>*/}
-						<p className='text-sm xl:text-xl text-gray-600 mb-4'>IP: <span
-							className='text-amber-400 text-base cursor-pointer hover:text-amber-600 transition duration-200 ease-in'
+						<p className='text-lg text-gray-600 mb-4'>IP: <span
+							className='text-amber-400 cursor-pointer hover:text-amber-600 transition duration-200 ease-in'
 							onClick={() => copyToClipBoard(ip)}>{ip}</span>
 						</p>
 

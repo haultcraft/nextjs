@@ -39,7 +39,6 @@ export const moneyFormatter = (moneyAmount: number) => {
 		return parseFloat(String(moneyAmount / 1_000)).toFixed(2) + 'K';
 	}
 	return String(moneyAmount);
-
 };
 
 export const copyToClipBoard = (text: string) => {

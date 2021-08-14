@@ -31,7 +31,7 @@ const LeaderBoardGeneral = ({}) => {
 
 	useEffect(() => {
 		handleGetPlayedtime();
-		handlePowerLevel();
+		// handlePowerLevel();
 		handleBalance();
 	}, []);
 
@@ -47,8 +47,8 @@ const LeaderBoardGeneral = ({}) => {
 												 color={{ topColor: 'bg-indigo-200', textColor: 'text-indigo-600' }} />
 						<LeaderBoard skill='Money' list={balanceTop || []} field='balance'
 												 color={{ topColor: 'bg-green-200', textColor: 'text-green-600', textPrefix: 'C$' }} />
-						<LeaderBoard skill='Power Level' list={powerLevel || []} field='level'
-												 color={{ topColor: 'bg-amber-200', textColor: 'text-amber-600' }} />
+						{/*<LeaderBoard skill='Power Level' list={powerLevel || []} field='level'*/}
+						{/*						 color={{ topColor: 'bg-amber-200', textColor: 'text-amber-600' }} />*/}
 
 					</div>
 				</div>

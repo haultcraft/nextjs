@@ -13,11 +13,11 @@ export async function getPlayerMCMMO(username: string) {
 }
 
 export async function getToplistPlayedtime() {
-	const { data } = await axios.get(`${API_HOST}/players/playedtime`);
+	const { data } = await axios.get(`${API_HOST}/playtime/toplist`);
 	return data;
 }
 
 export async function getToplistBalance() {
-	const { data } = await axios.get(`${API_HOST}/players/balance`);
+	const { data } = await axios.get(`${API_HOST}/balance/toplist`);
 	return data;
 }

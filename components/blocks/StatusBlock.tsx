@@ -8,9 +8,7 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const StatusBlock = ({}) => {
-	const [playersExpanded, isPlayersExpanded] = useState<boolean>(false);
 	const serverContext = useContext(ServerContext);
-
 
 	return (
 		<div style={{ backgroundImage: 'url(/img/stone_texture.png)', backgroundSize: '64px' }}
