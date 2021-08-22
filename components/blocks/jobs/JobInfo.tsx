@@ -23,9 +23,8 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 
 							<FontAwesomeIcon
 								icon={['fas', 'chevron-down']}
-								className={`${
-									open ? 'transform rotate-180' : ''
-								} w-5 h-5 text-${color}-500`}
+								className={`${open ? 'transform rotate-180' : ''
+									} w-5 h-5 text-${color}-500`}
 							/>
 						</Disclosure.Button>
 						<Disclosure.Panel className='pt-4 pb-2 text-sm text-gray-500'>
@@ -43,15 +42,15 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 										!!rewards &&
 										Object.keys(rewards)
 											.map(key =>
-												(
-													<table className='table-fixed'>
-														<thead>
+											(
+												<table className='table-fixed'>
+													<thead>
 														<tr className={`bg-mine-${color}/20 text-${color}/60`}>
 															<th className='text-center uppercase' colSpan={12}>
 																{key}
 															</th>
 														</tr>
-														<tr className='border-b bg-gray-100'>
+														<tr className='border-b bg-gray-100 text-right'>
 															<td className='text-left px-2'>
 																Stuff
 															</td>
@@ -61,10 +60,13 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 															<td>
 																Points
 															</td>
+															<td>
+																Exp
+															</td>
 														</tr>
 
-														</thead>
-														<tbody>
+													</thead>
+													<tbody>
 														{
 															Object.keys(rewards[key])
 																.map(item => (
@@ -76,15 +78,18 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 																			<span className='text-gray-400 text-xs'>C$</span>&nbsp;{moneyFormatter(rewards[key][item].income)}
 																		</td>
 																		<td className='text-right w-16'>
-																			{rewards[key][item].points}&nbsp;<span className='text-gray-400 text-xs'>XP</span>
+																			{rewards[key][item].points}&nbsp;<span className='text-gray-400 text-xs'>PTS</span>
+																		</td>
+																		<td className='text-right w-16'>
+																			{rewards[key][item].experience}&nbsp;<span className='text-gray-400 text-xs'>XP</span>
 																		</td>
 																	</tr>
 																))
 														}
-														</tbody>
-													</table>
+													</tbody>
+												</table>
 
-												),
+											),
 											)
 									}
 								</div>
