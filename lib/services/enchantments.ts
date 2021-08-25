@@ -10,7 +10,7 @@ export type Enchantment = {
 	enchantment: string;
 	display_name?: string;
 	description: string;
-	applies_to: string;
+	applies_to: string[];
 	max_level: number;
 	rarity?: string;
 }

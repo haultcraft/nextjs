@@ -83,7 +83,7 @@ const EnchantmentsList = ({ list, field, loading, type }: EnchantmentListProps) 
 												)
 											}
 											<td className='text-left px-2'>
-												{item['applies_to']}
+												{item['applies_to'].join(', ')}
 											</td>
 											<td className='text-center  px-2'>
 												{item['max_level']}
