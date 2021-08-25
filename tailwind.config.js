@@ -17,6 +17,7 @@ module.exports = {
 			colors: {
 				gray: colors.trueGray,
 				amber: colors.amber,
+				cyan: colors.cyan,
 				currentColor: 'currentColor',
 				cc: {
 					yellow: '#fccf14',
