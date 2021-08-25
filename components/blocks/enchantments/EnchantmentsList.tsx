@@ -5,10 +5,10 @@ type EnchantmentListProps = {
 	list: Enchantment[];
 	field: string;
 	loading: boolean;
-	rarity?: boolean;
+	type?: boolean;
 }
 
-const EnchantmentsList = ({ list, field, loading, rarity }: EnchantmentListProps) => {
+const EnchantmentsList = ({ list, field, loading, type }: EnchantmentListProps) => {
 	return (
 		<>
 			<div className='w-full overflow-x-auto md:overflow-hidden'>
@@ -19,9 +19,9 @@ const EnchantmentsList = ({ list, field, loading, rarity }: EnchantmentListProps
 						<th className='w-[12rem] px-2'>Enchantment</th>
 						<th className='min-w-[20rem] px-2'>Description</th>
 						{
-							!!rarity
+							!!type
 							&& (
-								<th className='md:w-[10rem] px-2'>Rarity</th>
+								<th className='md:w-[10rem] px-2'>Type</th>
 							)
 						}
 						<th className='md:w-[10rem] px-2'>Applies To</th>
@@ -43,7 +43,7 @@ const EnchantmentsList = ({ list, field, loading, rarity }: EnchantmentListProps
 												<Skeleton count={1} />
 											</td>
 											{
-												!!rarity
+												!!type
 												&& (
 													<td className='capitalize px-2'>
 														<Skeleton count={1} />
@@ -66,7 +66,7 @@ const EnchantmentsList = ({ list, field, loading, rarity }: EnchantmentListProps
 								<tbody>
 								{
 									list.map((item, index) => (
-										<tr key={item['enchantment']} className='border-b'>
+										<tr key={item['name']} className='border-b'>
 											<td className='text-center text-gray-300 px-2'>{index + 1}</td>
 											<td className='py-2 capitalize px-2'>
 												{item[field]}
@@ -75,10 +75,10 @@ const EnchantmentsList = ({ list, field, loading, rarity }: EnchantmentListProps
 												{item['description']}
 											</td>
 											{
-												!!rarity
+												!!type
 												&& (
 													<td className='capitalize px-2'>
-														{item['rarity']}
+														{item['type']}
 													</td>
 												)
 											}

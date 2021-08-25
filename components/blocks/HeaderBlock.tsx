@@ -16,7 +16,7 @@ const HeaderBlock = () => {
 	];
 
 	const menuLinks = [
-		// { label: 'Enchantments', url: '/enchantments' },
+		{ label: 'Enchantments', url: '/enchantments' },
 		{ label: 'Jobs', url: '/jobs' },
 		{ label: 'Shop', url: '/shop' },
 		{ label: 'Talismans', url: '/talismans' },

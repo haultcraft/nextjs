@@ -17,10 +17,10 @@ const EnchatmentsBlock = ({}) => {
 	}
 
 	function handleFilterEnchantments(searchString) {
-
+		searchString = searchString.toLowerCase()
 		if (!!searchString) {
-			setFilteredDefaultEnchantments(defaultEnchantments.filter(item => item['enchantment'].includes(searchString) || item['display_name'].includes(searchString) || item['description'].includes(searchString)));
-			setFilteredCustomEnchantments(customEnchantments.filter(item => item['enchantment'].includes(searchString) || item['description'].includes(searchString) || item['rarity'].includes(searchString.toLowerCase())));
+			setFilteredDefaultEnchantments(defaultEnchantments.filter(item => item['display_name'].toLowerCase().includes(searchString) || item['description'].toLowerCase().includes(searchString)));
+			setFilteredCustomEnchantments(customEnchantments.filter(item => item['display_name'].toLowerCase().includes(searchString) || item['description'].toLowerCase().includes(searchString) || item['type'].toLowerCase().includes(searchString.toLowerCase())));
 		} else {
 			setFilteredDefaultEnchantments(defaultEnchantments);
 			setFilteredCustomEnchantments(customEnchantments);
@@ -63,12 +63,12 @@ const EnchatmentsBlock = ({}) => {
 							<h3 className='text-gray-800 text-lg font-bold my-2 md:my-4'>Custom
 								Enchantments</h3>
 							<a
-								href='https://www.spigotmc.org/resources/1-8-1-17-1-%E2%AD%95-advancedenchantments-%E2%AD%90-400-custom-enchants-%E2%AD%90create-custom-enchantments-%E2%9C%85-50-sale.43058/'><span
-								className='text-gray-400 text-sm'>AdvancedEnchantments</span></a>
+								href='https://www.spigotmc.org/resources/1-16-1-17-%E2%9A%A1-ecoenchants-%E2%9C%A8-230-custom-enchantments-%E2%9C%85-essentials-cmi-support.79573/'><span
+								className='text-gray-400 text-sm'>EcoEnchants</span></a>
 						</div>
 
 						<EnchantmentsList list={filteredCustomEnchantments || []}
-															field='enchantment' rarity={true} loading={loading} />
+															field='display_name' type={true} loading={loading} />
 					</div>
 				</div>
 			</div>
