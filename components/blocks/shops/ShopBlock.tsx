@@ -51,20 +51,48 @@ const ShopBlock = ({}) => {
 						className='text-gray-400 text-sm'>EconomyShopGUI</span></a>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
-						<ShopCategory title='Workstations' list={workstationsShop || []} />
-						<ShopCategory title='Dyes' list={dyesShop || []} />
-						<ShopCategory title='Enchanting' list={enchantingShop || []} field='enchantments' />
-						<ShopCategory title='Farming' list={farmingShop || []} />
-						<ShopCategory title='Food' list={foodShop || []} />
-						<ShopCategory title='Mobs' list={mobsShop || []} />
-						<ShopCategory title='Music' list={musicShop || []} />
-						<ShopCategory title='Ores' list={oresShop || []} />
-						<ShopCategory title='Redstone' list={redstoneShop || []} />
-						{/*<ShopCategory title='SpawnEggs' list={spawnEggsShop || []} />*/}
-						<ShopCategory title='Others' list={othersShop || []} />
-						<ShopCategory title='Decoration' list={decorationShop || []} />
-						<ShopCategory title='Blocks' list={blocksShop || []} />
-						<ShopCategory title='Potions' list={potionsShop || []} field='potiontypes' />
+						<div>
+							<ShopCategory title='Workstations' list={workstationsShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Dyes' list={dyesShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Enchanting' list={enchantingShop || []} field='enchantments' />
+						</div>
+						<div>
+							<ShopCategory title='Farming' list={farmingShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Food' list={foodShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Mobs' list={mobsShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Music' list={musicShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Ores' list={oresShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Redstone' list={redstoneShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Others' list={othersShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Decoration' list={decorationShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Blocks' list={blocksShop || []} />
+						</div>
+						<div>
+							<ShopCategory title='Potions' list={potionsShop || []} field='potiontypes' />
+						</div>
+						<div>
+							<ShopCategory title='SpawnEggs' list={spawnEggsShop || []} />
+						</div>
 					</div>
 				</div>
 			</div>

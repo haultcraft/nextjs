@@ -4,7 +4,7 @@ import Skeleton from 'react-loading-skeleton';
 const ShopCategory = ({ title, list, field = 'material' }: ShopCategoryProps) => {
 	return (
 		<>
-			<table className='table-fixed'>
+			<table className='table-auto w-full'>
 				<thead>
 				<tr>
 					<th className=' uppercase' colSpan={3}>{title}</th>
