@@ -62,7 +62,7 @@ const StatusBlock = ({}) => {
 													 serverContext.currentPlayers.map(player => (
 														<SwiperSlide key={player}>
 															<div
-																className='flex flex-col items-center border-edge bg-gray-400/10 shadow w-full p-4 cursor-pointer hover:bg-gray-100/20 transition-color ease-in duration-200'>
+																className='flex flex-col items-center border-edge border-amber-400 bg-gray-400/10 shadow w-full p-4 cursor-pointer hover:bg-gray-100/20 transition-color ease-in duration-200'>
 																<img src={getAvatarURL(player)} alt={player + ' head'} className='h-12 rounded mb-2' />
 																<p className='text-gray-200 font-semibold text-center text-sm break-all'>{player}</p>
 															</div>

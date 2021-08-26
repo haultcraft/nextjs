@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getListItems, getSectionItems, ItemShop } from '@/lib/services/shops';
-import ShopCategory from '@/components/ShopCategory';
+import ShopCategory from '@/components/blocks/shops/ShopCategory';
+import ShopInfo from '@/components/blocks/shops/ShopInfo';
 
 const ShopBlock = ({}) => {
 	const [blocksShop, setBlocksShop] = useState<ItemShop[]>();
@@ -23,14 +24,12 @@ const ShopBlock = ({}) => {
 		setBlocksShop(await getSectionItems('Blocks'));
 		setDecorationShop(await getSectionItems('Decoration'));
 		setDyesShop(await getSectionItems('Dyes'));
-		setEnchantingShop(await getSectionItems('Enchanting'));
 		setFarmingShop(await getSectionItems('Farming'));
 		setFoodShop(await getSectionItems('Food'));
 		setMobsShop(await getSectionItems('Mobs'));
 		setMusicShop(await getSectionItems('Music'));
 		setOresShop(await getSectionItems('Ores'));
 		setOthersShop(await getSectionItems('Others'));
-		setPotionsShop(await getSectionItems('Potions'));
 		setRedstoneShop(await getSectionItems('Redstone'));
 		setWorkstationsShop(await getSectionItems('Workstations'));
 	}
@@ -50,49 +49,38 @@ const ShopBlock = ({}) => {
 						href='https://www.spigotmc.org/resources/economyshopgui.69927/'><span
 						className='text-gray-400 text-sm'>EconomyShopGUI</span></a>
 					</div>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
-						<div>
-							<ShopCategory title='Workstations' list={workstationsShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Dyes' list={dyesShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Enchanting' list={enchantingShop || []} field='enchantments' />
-						</div>
-						<div>
-							<ShopCategory title='Farming' list={farmingShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Food' list={foodShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Mobs' list={mobsShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Music' list={musicShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Ores' list={oresShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Redstone' list={redstoneShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Others' list={othersShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Decoration' list={decorationShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Blocks' list={blocksShop || []} />
-						</div>
-						<div>
-							<ShopCategory title='Potions' list={potionsShop || []} field='potiontypes' />
-						</div>
-						<div>
-							<ShopCategory title='SpawnEggs' list={spawnEggsShop || []} />
-						</div>
+					<div>
+						<ShopInfo title='Workstations' list={workstationsShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Dyes' list={dyesShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Farming' list={farmingShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Food' list={foodShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Mobs' list={mobsShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Music' list={musicShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Ores' list={oresShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Redstone' list={redstoneShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Others' list={othersShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Decoration' list={decorationShop || []} />
+					</div>
+					<div className='mt-4'>
+						<ShopInfo title='Blocks' list={blocksShop || []} />
 					</div>
 				</div>
 			</div>

@@ -20,7 +20,7 @@
     content: ' ';
     width: 10px;
     height: 10px;
-    border-color: #FBBF24; /* or whatever colour */
+    border-color: inherit; /* or whatever colour */
     border-style: solid; /* or whatever style */
   }
 
@@ -35,6 +35,32 @@
     right: 0;
     border-width: 2px 2px 0 0;
     transform: rotate(90deg);
+  }
+}
+
+.border-edge-top {
+  position: relative;
+
+  &:before, &:after, & > :first-child:before, & > :first-child:after {
+    position: absolute;
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border-color: inherit; /* or whatever colour */
+    border-style: solid; /* or whatever style */
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px
+  }
+
+  &:after {
+    top: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+    //transform: rotate(90deg);
   }
 }
 

@@ -1,7 +1,7 @@
 import { ItemJob } from '@/lib/services/jobs';
 import { Disclosure } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import LeaderBoard from '@/components/LeaderBoard';
+import LeaderBoard from '@/components/blocks/leaderboards/LeaderBoard';
 import { moneyFormatter } from '@/utils';
 
 const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
@@ -11,9 +11,9 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 				{({ open }) => (
 					<>
 						<Disclosure.Button
-							className={`flex items-center justify-between w-full py-2 text-sm font-medium text-left border-b-2 border-${color}-200 outline-none focus:outline-none`}>
+							className={`flex items-center justify-between w-full py-2 text-sm font-medium text-left border-b-2 outline-none focus:outline-none`}>
 							<div>
-								<h3 className='text-lg leading-6 font-medium capitalize'>
+								<h3 className='text-xl leading-6 font-medium capitalize'>
 									{name}
 								</h3>
 								<p className='mt-1 max-w-2xl text-sm text-gray-500'>
@@ -35,7 +35,6 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 									<LeaderBoard
 										skill={name}
 										list={toplist || []}
-										color={{ textColor: `text-mine-${color}/60`, topColor: `bg-mine-${color}/10` }}
 										field='level'
 									/>
 								</div>
@@ -49,7 +48,7 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 													<div className='mb-8' key={key}>
 														<table className='table-auto w-full'>
 															<thead>
-															<tr className={`bg-mine-${color}/20 text-${color}/60`}>
+															<tr>
 																<th className='text-center uppercase' colSpan={12}>
 																	{key}
 																</th>

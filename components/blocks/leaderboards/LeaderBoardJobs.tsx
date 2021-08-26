@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import LeaderBoard from '@/components/LeaderBoard';
+import LeaderBoard from '@/components/blocks/leaderboards/LeaderBoard';
 import { getTopListJob } from '@/lib/services/jobs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';

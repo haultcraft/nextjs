@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import LeaderBoard from '@/components/LeaderBoard';
+import LeaderBoard from '@/components/blocks/leaderboards/LeaderBoard';
 import { getToplistBalance, getToplistPlayedtime } from '@/lib/services/player';
 import { convertToDuration, moneyFormatter } from '@/utils';
 import { getTopListSkill } from '@/lib/services/mcmmo';

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getTopListSkill } from '@/lib/services/mcmmo';
-import LeaderBoard from '@/components/LeaderBoard';
+import LeaderBoard from '@/components/blocks/leaderboards/LeaderBoard';
 
 const LeaderBoardSkills = ({}) => {
 	const [miningSkill, setMiningSkill] = useState<[]>();
