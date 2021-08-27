@@ -36,6 +36,10 @@ const JobInfo = ({ name, description, rewards, toplist, color }: ItemJob) => {
 										skill={name}
 										list={toplist || []}
 										field='level'
+										color={{
+											textColor: 'text-gray-600',
+											topColor: 'bg-gray-200',
+										}}
 									/>
 								</div>
 
