@@ -31,8 +31,8 @@ const HeaderBlock = () => {
 			<header className='max-w-screen-xl h-20 mx-auto px-6 md:px-8 xl:px-4 items-center flex justify-between z-0'>
 				<div className='flex w-full md:w-[180px] justify-between items-center bg-white md:bg-transparent z-20 h-20'>
 					<Link href='/'>
-						<a className='text-2xl font-bold font-minecrafter-alt tracking-wider min-w-[180px]'>
-							Comp <span className='text-amber-400'>Craft</span>
+						<a className='text-2xl font-bold font-minecrafter-alt tracking-wider min-w-[200px]'>
+							Hault <span className='text-amber-400'>Craft</span>
 						</a>
 					</Link>
 					<span onClick={() => isNavOpen(!navOpen)} className='md:hidden'>

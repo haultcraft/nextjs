@@ -12,7 +12,7 @@ const HeroBlock = ({}) => {
 				<div
 					className='max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 grid md:grid-cols-4 xl:grid-cols-5 gap-x-12 lg:gap-x-20'>
 					<div className='order-2 md:order-1 col-span-3 self-center'>
-						<h1 className='text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8'>Comp Craft
+						<h1 className='text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8'>Hault Craft
 							Club</h1>
 						{/*<p className='text-lg xl:text-xl text-gray-600 mb-4'>Survival Hard</p>*/}
 						{

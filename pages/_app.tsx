@@ -53,11 +53,11 @@ function App({ Component, pageProps }) {
 			version: serverVersion,
 			plugins: serverPlugins,
 			loading: loading,
-			ip: 'compcraft.servegame.com',
+			ip: 'hault.servegame.com',
 		}}>
 			<LayoutBlock>
 				<Head>
-					<title>Comp Craft | 1.17.1</title>
+					<title>Hault Craft | 1.17.1</title>
 					<meta name='viewport'
 								content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
 				</Head>
